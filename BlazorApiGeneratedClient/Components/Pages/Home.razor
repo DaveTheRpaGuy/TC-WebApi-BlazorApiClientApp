@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@code {
+    private void DoSomething()
+    {
+        BlazorApiGeneratedClient.Services.TodoApi test = new("https://localhost:7170/api", new HttpClient());
+
+        //test.CreateTodoAsync();
+    }
+}
