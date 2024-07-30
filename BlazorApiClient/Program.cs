@@ -1,9 +1,12 @@
 using BlazorApiClient.Components;
+using BlazorApiClient.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddScoped<TokenModel>();
 
 builder.Services.AddHttpClient("api", opts =>
 {
